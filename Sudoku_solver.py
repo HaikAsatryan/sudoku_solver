@@ -33,7 +33,7 @@ puzzle = np.array([
 
 ])
 
-# Extra hard puzzle (346,386 tries to solve)
+# # Extra hard puzzle (346,386 tries to solve)
 puzzle = np.array([
 
     [5, 0, 9, 4, 0, 0, 0, 0, 0],
@@ -61,7 +61,6 @@ def possible(y, x, n):
     global rows_checked
     global columns_checked
     global grids_checked
-
     for i in range(9):
         if puzzle[y][i] == n:
             columns_checked += 1
@@ -104,6 +103,5 @@ def solve():
         f'Sudoku was solved with {rows_checked} row checks, {columns_checked} column checks, {grids_checked} '
         f'grid checks and {puzzle_checked} puzzle checks in {round(end, 3)} seconds! {chr(10)} See below the answer: {chr(10)} {puzzle}')
     quit()
-
 
 solve()
